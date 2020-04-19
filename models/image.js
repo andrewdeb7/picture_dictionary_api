@@ -20,4 +20,4 @@ function saveImageData(imageId, imageFile) {
 }
 
 
-module.exports = { getImageIds, saveImageMetaData, saveImageData, getImageData }
+module.exports = { getImageIds, saveImageMetaData, saveImageData, getImageData, saveImageData }

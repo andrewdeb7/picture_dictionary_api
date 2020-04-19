@@ -20,9 +20,9 @@ function saveImageData (request, response) {
   let imageFile = request.files.image;
 
   image.saveImageMetaData(request.params.contentId)
-  .then(image => {
-    return image.saveImageData(image.id, imageFile)
-                            .then(() => image);
+  .then(imageRecord => {
+    return image.saveImageData(imageRecord.id, imageFile)
+                            .then(() => imageRecord);
 
   })
   .then(image => {

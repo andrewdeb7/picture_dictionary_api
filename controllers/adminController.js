@@ -10,7 +10,7 @@ function saveTheme(request, response) {
   console.log(date + " - new theme - " + request.body.theme);
   theme.saveTheme(request.body.theme)
     .then(id => response.status(200).json(id))
-    .catch(e => response.status(500).send('The theme could not be added.'));
+    .catch(e => {console.log(e);response.status(500).send('The theme could not be added.');});
 
 }
 
